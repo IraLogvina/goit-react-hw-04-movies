@@ -1,0 +1,20 @@
+.trendingMovies {
+  display: grid;
+  max-width: calc(100vw - 48px);
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-gap: 16px;
+  margin: auto;
+  padding: 0;
+}
+
+.trendingMovie_image {
+  width: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trendingMovie_image:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}

@@ -1,0 +1,21 @@
+.reviews {
+  padding: 15px;
+  color: #8b4513;
+  background-color: rgba(209, 207, 204, 0.75);
+}
+
+.reviewsItem {
+  margin-bottom: 15px;
+}
+
+.reviewsAuthor {
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.noReview {
+  text-align: center;
+  font-size: 24px;
+  color: white;
+}

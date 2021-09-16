@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { lazy, Suspense } from "react";
+import { Route, Switch } from "react-router-dom";
 
-function App() {
+// import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import Loader from "./components/Loader/Loader";
+import Container from "./components/Container";
+import AppBar from "./components/AppBar";
+
+const HomePage = lazy(() => import("./views/HomePage"));
+
+const MoviesPage = lazy(() => import("./views/MoviesPage/MoviesPage"));
+
+const MovieDetailsPage = React.lazy(() =>
+  import('./views/MovieDetailsPage/MovieDetailsPage'),
+);
+
+const NotFound = lazy(() => import("./views/NotFound/NotFound"));
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <AppBar />
+
+      <Suspense fallback={<Loader />}>
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+
+          <Route exact path="/movies">
+            <MoviesPage />
+          </Route>
+
+          <Route path="/movies/:moviesId">
+            <MovieDetailsPage />
+          </Route>
+
+          <Route path="">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Suspense>
+    </Container>
   );
 }
-
-export default App;

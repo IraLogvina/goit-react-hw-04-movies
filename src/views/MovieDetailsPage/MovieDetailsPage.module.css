@@ -1,0 +1,94 @@
+.movieInfo {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+
+.movieInfoImg {
+  width: 100%;
+}
+
+.title {
+  color: #8b4513;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.movieInfoDetails {
+  margin-left: 25px;
+  color: white;
+}
+
+.overview {
+  color: #8b4513;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.description {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  display: block;
+  margin-top: 15px;
+  font-style: italic;
+}
+
+.button {
+  min-width: 100px;
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  line-height: 1;
+  margin: 10px 0;
+  padding: 10px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: white;
+  border: aliceblue;
+  color: #8b4513;
+  transition: all 150ms ease-in-out;
+}
+
+.button:hover {
+  background-color: #8b4513;
+  color: #fff;
+}
+
+.genre {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.genre li:not(:last-child)::after {
+  content: ",";
+  margin-right: 5px;
+}
+
+.navigation {
+  border-top: 1px solid white;
+}
+
+.link {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: #8b4513;
+  text-decoration: wavy;
+  transform: scale(1.2);
+}
+
+.activeLink {
+  color: #8b4513;
+  font-weight: bold;
+  text-decoration: underline;
+}

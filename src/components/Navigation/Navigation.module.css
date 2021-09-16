@@ -1,0 +1,21 @@
+.navigation {
+  margin-bottom: 20px;
+  margin-top: auto;
+  text-align: start;
+  border-bottom: 1px solid white;
+}
+
+.link {
+  display: inline-block;
+  padding: 15px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.activeLink {
+  color: #8b4513;
+  font-weight: 600;
+  text-decoration: underline;
+}
